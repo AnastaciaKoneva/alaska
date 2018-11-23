@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alaska</title>
+	<link rel="stylesheet" type="text/css" href="style.css" /> 
+	<link href="https://fonts.googleapis.com/css?family=Domine|Montserrat:400,700" rel="stylesheet">
+	<link href="animate.css" rel="stylesheet">
+	<link rel="shortcut icon" href="images/favicon.jpg" type="image/jpeg" />
+	<script src="jquery-3.3.1.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<script>
+			function animate(elem){
+				var effect = elem.data("effect");
+				elem.addClass("animated " + effect).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+					elem.removeClass("animated " + effect);
+				});
+			}
+			
+			$(document).ready(function(){
+				$(".test").mouseenter(function(){
+					animate($(this));
+				});
+				
+				$("#someid").click(function(){
+					animate($(this));
+				});
+			});
+	</script>
+	
+</head>
+<body>	
+	
+	<header>
+		<div class="header">
+			<nav class="nav-left">
+				<li class="animated test" data-effect="pulse"><a href="#">Home</a></li>
+				<li class="animated test" data-effect="pulse"><a href="#">About</a></li>
+				<li class="animated test" data-effect="pulse"><a href="#">Our works</a></li>
+			</nav>
+			<img class="animated test" data-effect="pulse" src="images/Logo(White).png" alt="alyaska">
+			<nav class="nav-right">
+				<li class="animated test" data-effect="pulse"><a href="#">Services</a></li>
+				<li class="animated test" data-effect="pulse"><a href="#">News</a></li>
+				<li class="animated test" data-effect="pulse"><a href="#">Contacts</a></li>
+			</nav>
+		</div>
+	</header>
+
+	<div class="content">
+		<div class="write-us">
+			<form action="" method="post">
+				<h1>Write Us</h1>
+				<label name="email">YOUR E-MAIL <br>
+					<input type="text" name="email" required placeholder="Enter your e-mail">
+				</label><br>
+				<label name="message">YOUR MESSAGE<br>
+					<textarea name="message" rows="4" cols="42" required placeholder="Enter your message"></textarea>
+				</label><br>
+				<input type="submit" name="send" value="Send your message" class="animated test" data-effect="pulse">
+			</form>
+		</div>
+
+		<div class="contacts">
+			<h1>Contacts</h1>
+			<hr>
+			<table>
+				<tr valign="top">
+					<td>
+						<h2>Address</h2>
+						<p>West Olympic Boulevard Apt. 100 Los Angeles, CA</p>
+					</td>	
+					<td>
+						<h2>E-mail</h2>
+						<a href="#">pecherits4@gmail.com</a>
+					</td>
+				</tr>
+				<tr valign="top">
+					<td>
+						<h2>Phone</h2>
+						<p>+30 226 4881 515</p>
+					</td>
+					<td>
+						<h2>Fax</h2>
+						<p>+30 226 4881 515</p>
+					</td>
+				</tr>
+				<tr valign="top">
+					<td>
+						<h2>Skype</h2>
+						<p>pecherits4</p>
+					</td>
+					<td>
+						<h2>Telegram</h2>
+						<a href="#">@pecherits4</a>
+					</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+	
+
+</body>
+</html>
+
